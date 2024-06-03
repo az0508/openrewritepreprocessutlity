@@ -1,0 +1,17 @@
+logging:
+  pattern:
+    file: '%clr(%d{yyyy-MM-dd HH:mm:ss.SSS}){green} [%level] %c{1.} [%t] %m%n'
+  file:
+    name: error.log
+spring:
+  application:
+    name: pre-process-openrewriteutility
+git:
+  repo:
+    path: C:\J-projects\projects\
+  branch:
+    name:
+      openrewrite:
+        recipe:
+          name:
+            sync: java18
