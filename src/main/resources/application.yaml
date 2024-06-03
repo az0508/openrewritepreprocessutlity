@@ -2,16 +2,16 @@ logging:
   pattern:
     file: '%clr(%d{yyyy-MM-dd HH:mm:ss.SSS}){green} [%level] %c{1.} [%t] %m%n'
   file:
-    name: error.log
+    name: process.log
 spring:
   application:
     name: pre-process-openrewriteutility
 git:
   repo:
-    path: C:\J-projects\projects\
+    path: C:\J-projects\projects\    # Git clone ALL Repos path
   branch:
     name:
       openrewrite:
         recipe:
           name:
-            sync: java18
+            sync: java18             # Git branch will create as per openrewrite recipe
