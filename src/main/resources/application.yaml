@@ -1,17 +1,21 @@
-logging:
-  pattern:
-    file: '%clr(%d{yyyy-MM-dd HH:mm:ss.SSS}){green} [%level] %c{1.} [%t] %m%n'
-  file:
-    name: process.log
 spring:
-  application:
-    name: pre-process-openrewriteutility
+    application:
+        name: pre-process-openrewriteutility
 git:
-  repo:
-    path: C:\J-projects\projects\    # Git clone ALL Repos path
-  branch:
-    name:
-      openrewrite:
-        recipe:
-          name:
-            sync: java18             # Git branch will create as per openrewrite recipe
+    branch:
+        name:
+            openrewrite:
+                recipe:
+                    name:
+                        sync: java18
+    process:
+        available: checkout|push
+        available.active: push
+        available.push.comments: code push through auto-process
+    repo:
+        path: C:\Git\checkout2\
+logging:
+    file:
+        name: process.log
+    pattern:
+        file: '%clr(%d{yyyy-MM-dd HH:mm:ss.SSS}){green} [%level] %c{1.} [%t] %m%n'
